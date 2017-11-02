@@ -42,6 +42,8 @@ class SecondViewController: UIViewController {
             scoreVasc += 1
         }
         if age.isOn {
+            scoreVasc += 2
+        } else if age65.isOn {
             scoreVasc += 1
         }
         if DM.isOn {
@@ -53,14 +55,9 @@ class SecondViewController: UIViewController {
         if vascular.isOn {
             scoreVasc += 1
         }
-        if age65.isOn {
-            scoreVasc += 1
-            
-        }
         if female.isOn {
             scoreVasc += 1
         }
-        
         if scoreVasc == 10 {
             strokeScore.text = "CHA2DS2-VASc Stroke Risk Score: " + String(scoreVasc - 1)
         } else {
